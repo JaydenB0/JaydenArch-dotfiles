@@ -32,7 +32,7 @@ font-3 = "Font Awesome 5 Free Solid:size=12;2"
 
 modules-left =
 modules-center = workspaces
-modules-right = battery
+modules-right = date battery
 
 [module/workspaces]
 type = internal/xworkspaces
@@ -63,6 +63,18 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-format-charging-background = ${color.shade5}
-format-charging-padding = 4
+format-discharging-background = ${color.shade5}
+format-discharging-padding = 4
 
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %m/%d/%Y%
+date-alt = %A, %B %d %Y
+time = %r
+
+format =  <label>
+label = %date% %time%
+format-background = ${color.shade4}
+format-padding = 4
