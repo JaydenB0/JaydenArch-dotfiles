@@ -32,14 +32,14 @@ font-3 = "Font Awesome 5 Free Solid:size=12;2"
 
 modules-left =
 modules-center = workspaces
-modules-right = network date battery
+modules-right = temperature network date battery
 
 [module/workspaces]
 type = internal/xworkspaces
 
-label-active = 
-label-occupied = 
-label-urgent = 
+label-active = 
+label-occupied = 
+label-urgent = 
 label-empty = 
 
 [module/battery]
@@ -66,7 +66,10 @@ ramp-capacity-4 = 
 format-discharging-background = ${color.shade5}
 format-discharging-padding = 4
 
+format-full = <label-full>
 label-full = Full
+format-full-padding = 5
+format-full-background = ${color.shade5}
 [module/date]
 type = internal/date
 interval = 1.0
@@ -112,3 +115,20 @@ label-disconnected = 
 animation-packetloss-0 = 
 animation-packetloss-1 = 
 
+[module/temperature]
+type = internal/temperature
+interval = 5
+thermal-zone = 0
+warn-temperature = 60
+units = true
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+label = %temperature-c%
+label-warn =  %temperature-c%
+label-warn-foreground = #f00
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+format-background = ${color.shade2}
+format-padding = 5
