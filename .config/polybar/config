@@ -1,3 +1,5 @@
+;; Maintained by Jayden Bulexa <JaydenB0@pm.me>
+
 ;; Colors
 [color]
 
@@ -8,10 +10,12 @@ shade3 = #b748d0
 shade4 = #9d2fb7
 shade5 = #7a248e
 
+; Basic colors
 bg = #110514
 white = #ffffff
 black = #000000
 
+;; Main Bar
 [bar/main]
 monitor = eDP-1
 fixed-center = true
@@ -34,6 +38,7 @@ modules-left =
 modules-center = workspaces
 modules-right = temperature network date battery
 
+;; Modules
 [module/workspaces]
 type = internal/xworkspaces
 
