@@ -1,9 +1,12 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/home/jayden/.gem/ruby/2.6.0/bin
 source /home/$USERNAME/.config/alien/alien.zsh
-
+eval "$(pyenv init -)"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$USERNAME/.oh-my-zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
